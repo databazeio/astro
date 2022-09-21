@@ -1,0 +1,21 @@
+<idea-plugin>
+  <id>io.databaze.astro</id>
+  <name>Astro</name>
+  <vendor email="support@databaze.io" url="https://databaze.io">databaze.io</vendor>
+
+  <description><![CDATA[
+    Astro plugin skeleton (for https://astro.build/)
+  ]]></description>
+  <depends>com.intellij.modules.platform</depends>
+  <actions>
+    <action class="io.databaze.astro.lang.actions.AstroCreateComponentAction" id="AstroCreateComponentAction">
+      <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewHtmlFile"/>
+    </action>
+  </actions>
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="Astro" extensions="astro" language="Astro" implementationClass="io.databaze.astro.lang.AstroFileType" fieldName="INSTANCE"/>
+    <internalFileTemplate name="Astro Template.astro"/>
+
+  </extensions>
+
+</idea-plugin>
