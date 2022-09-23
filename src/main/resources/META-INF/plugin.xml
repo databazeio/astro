@@ -7,6 +7,7 @@
     Astro plugin skeleton (for https://astro.build/)
   ]]></description>
   <depends>com.intellij.modules.platform</depends>
+
   <actions>
     <action class="io.databaze.astro.lang.actions.AstroCreateComponentAction" id="AstroCreateComponentAction">
       <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewHtmlFile"/>
@@ -16,6 +17,17 @@
     <fileType name="Astro" extensions="astro" language="Astro" implementationClass="io.databaze.astro.lang.AstroFileType" fieldName="INSTANCE"/>
     <internalFileTemplate name="Astro Template.astro"/>
 
+    <multiHostInjector implementation="io.databaze.astro.lang.AstroInjector"/>
+    <fileType
+      name="Astro"
+      implementationClass="io.databaze.astro.lang.AstroFileType"
+      fieldName="INSTANCE"
+      language="Astro"
+      extensions="astro"/>
+    <lang.parserDefinition
+      language="Astro"
+      implementationClass="io.databaze.astro.lang.AstroParserDefinition"/>
   </extensions>
+
 
 </idea-plugin>
